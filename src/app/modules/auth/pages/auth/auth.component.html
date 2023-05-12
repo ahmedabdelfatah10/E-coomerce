@@ -1,0 +1,23 @@
+<div class="layout">
+  <div class="logo">
+  <h1>welcome to E-comerce</h1>
+  </div>
+  <form [formGroup]="loginForm" class="loginForm" (ngSubmit)="submitForm()">
+
+    <h2 class="loginForm_header">welcome Back</h2>
+    <h3 *ngIf="showErorrMessage" class="error-message">invalid UserName or password</h3>
+    <mat-form-field class="loginForm_btn">
+      <input matInput placeholder="userName" formControlName="userName" class="loginForm_btn">
+      <mat-error *ngIf="loginForm.controls['userName'].errors?.['required']">userName is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="loginForm_btn">
+      <input matInput placeholder="password"  formControlName="password" >
+      <mat-error *ngIf="loginForm.controls['password'].errors?.['required']">password is required</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" class="loginForm_btn">Submit</button>
+  </form>
+</div>
+
+

@@ -1,0 +1,36 @@
+.card{
+min-width: 300px;
+max-width: 350px;
+margin: 5px;
+height: 300px;
+// overflow: hidden;
+// text-overflow: ellipsis;
+// display: -webkit-box;  
+padding: 10px;
+// -webkit-line-clamp: 7;
+// -webkit-box-orient: vertical; 
+text-overflow: ellipsis;     
+overflow: hidden;
+display: -webkit-box;
+-webkit-line-clamp: 7;  
+-webkit-box-orient: vertical;  
+
+}
+.text{
+  font-size: 14px;
+  line-height: 24px;
+}
+.disc{
+  font-size: 14px;
+  line-height: 20px;
+  height: 125px;
+  overflow: hidden;
+}
+.stars{
+  color:#FFD700;
+}
+.price{
+  font-size: 20px;
+  font-weight: bold;
+  color:black;
+}

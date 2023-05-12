@@ -1,0 +1,30 @@
+<div class="category-container">
+  <div class="header">
+    <h3>{{title}}</h3>
+    <div class="filter">
+      <h4 style="font-size: 24px;">filter</h4>
+      <img src="assets/filter.svg" alt="filter-icon" (click)="showFilterBox()"/>
+    </div>
+
+  </div>
+
+  <div class="category">
+    <ng-container *ngFor="let item of items">
+      <app-card [item]="item"></app-card>
+    </ng-container>
+    <div *ngIf="showBox" class="filter-box">
+      <form [formGroup]="sortForm" (ngSubmit)="onSelect()">
+        <label class="radio">
+          <input type="radio" value="price" formControlName="sortType">
+            <span class="label">price</span>
+        </label>
+        <label class="radio">
+          <input type="radio" value="rate" formControlName="sortType">
+            <span class="label">rate</span>
+        </label>
+        <button mat-raised-button color="primary" class="loginForm_btn">select</button>
+
+     </form>
+    </div>
+  </div>
+</div>

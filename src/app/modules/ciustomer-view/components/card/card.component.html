@@ -1,0 +1,17 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title class="text">{{item.title}}</mat-card-title>
+
+        <mat-card-subtitle class="price">EGP {{item.price}}</mat-card-subtitle>
+        <mat-card-subtitle class="stars">{{item.rating?.rate}} stars ({{item.rating?.count}})</mat-card-subtitle>
+      
+     
+      <img mat-card-sm-image [src]="item.image" >
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content class="disc">
+   {{item.description}}
+  </mat-card-content>
+</mat-card>
+

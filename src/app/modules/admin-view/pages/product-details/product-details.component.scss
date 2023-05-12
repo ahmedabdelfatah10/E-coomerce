@@ -1,0 +1,30 @@
+.Form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 25px;
+  height: 100%;
+  width: 100%;
+  &_header {
+    margin-bottom: 30px;
+  }
+  &_btn {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
+
+.product-detail{
+  width:75%;
+
+  margin: auto;
+  margin-top: 50px;
+}
+.image{
+  display: block;
+  margin: auto;
+  width: 250px;
+  height: 250px;
+  margin-bottom: 50px;
+}

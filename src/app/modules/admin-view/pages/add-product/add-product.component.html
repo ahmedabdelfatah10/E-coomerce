@@ -1,0 +1,43 @@
+
+  <form [formGroup]="productForm" class="Form">
+
+
+    <mat-form-field class="Form_btn">
+      <input matInput placeholder="id"  formControlName="id">
+      <mat-error *ngIf="productForm.controls['id'].errors?.['required']">id is required</mat-error>
+    </mat-form-field>
+
+
+
+    <mat-form-field class="Form_btn">
+      <input matInput placeholder="title"  formControlName="title" >
+      <mat-error *ngIf="productForm.controls['title'].errors?.['required']">title is required</mat-error>
+    </mat-form-field>
+
+
+
+    <mat-form-field class="Form_btn">
+      <input matInput placeholder="category" formControlName="category" class="loginForm_btn">
+      <mat-error *ngIf="productForm.controls['category'].errors?.['required']">category is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="Form_btn">
+      <input matInput placeholder="price" formControlName="price" class="loginForm_btn">
+      <mat-error *ngIf="productForm.controls['price'].errors?.['required']">price is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="Form_btn">
+      <input matInput placeholder="image" formControlName="image" class="loginForm_btn" (input)="showImage($event)">
+      <mat-error *ngIf="productForm.controls['image'].errors?.['required']">image is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="Form_btn">
+      <input matInput placeholder="description" formControlName="description" class="loginForm_btn">
+      <mat-error *ngIf="productForm.controls['description'].errors?.['required']">description is required</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" class="Form_btn" (click)="addItem()">ADD</button>
+
+  </form>
+
+
+

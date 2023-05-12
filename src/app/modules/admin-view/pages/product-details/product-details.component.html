@@ -1,0 +1,48 @@
+<div class="product-detail">
+  <img [src]="image" alt="product_image" class="image"/>
+  <div *ngIf="showForm">
+    <form [formGroup]="productForm" class="loginForm">
+
+
+      <mat-form-field class="Form_btn">
+        <input matInput placeholder="id"  formControlName="id">
+
+      </mat-form-field>
+
+
+
+      <mat-form-field class="Form_btn">
+        <input matInput placeholder="title"  formControlName="title" >
+        <mat-error *ngIf="productForm.controls['title'].errors?.['required']">password is required</mat-error>
+      </mat-form-field>
+
+
+
+      <mat-form-field class="Form_btn">
+        <input matInput placeholder="category" formControlName="category" class="loginForm_btn">
+        <mat-error *ngIf="productForm.controls['category'].errors?.['required']">userName is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="Form_btn">
+        <input matInput placeholder="price" formControlName="price" class="loginForm_btn">
+        <mat-error *ngIf="productForm.controls['price'].errors?.['required']">userName is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="Form_btn">
+        <input matInput placeholder="image" formControlName="image" class="loginForm_btn" (input)="showImage($event)">
+        <mat-error *ngIf="productForm.controls['image'].errors?.['required']">userName is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="Form_btn">
+        <input matInput placeholder="description" formControlName="description" class="loginForm_btn">
+        <mat-error *ngIf="productForm.controls['description'].errors?.['required']">userName is required</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" class="Form_btn" (click)="submitForm()">update</button>
+      <button mat-raised-button color="warn" class="Form_btn" (click)="deleteItem()">delete</button>
+    </form>
+
+
+  </div>
+</div>
+
+
