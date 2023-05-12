@@ -26,9 +26,7 @@ export class ProductDetailsComponent implements OnInit {
     this.route.params.subscribe((params: any) => {
       this.id = Number(params.id);
       this.productservice.products.subscribe((items:Product[])=>{
-        console.log(items)
         let item=items.filter((item)=> Number(item.id) === this.id)[0]
-        console.log(item)
         this.showForm = true;
         this.prepareForm(item);
         this.image = item.image;

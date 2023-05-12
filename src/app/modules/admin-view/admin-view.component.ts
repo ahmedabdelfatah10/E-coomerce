@@ -19,7 +19,6 @@ export class AdminViewComponent implements OnInit,OnDestroy {
 
  ngOnInit(): void {
  this.productservice.products.pipe(takeUntil(this.unsubscribe$)).subscribe((items:Product[])=>{
-  console.log(items);
    if(!items.length){
 
     this.productservice.getProducts().subscribe((res:any)=>{
@@ -46,5 +45,5 @@ ngOnDestroy(): void {
   this.unsubscribe$.next();
   this.unsubscribe$.complete();
 }
- 
+
 }
