@@ -25,3 +25,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+about 
+This is an e-commerce app that handles two users the first is admin the admin can get all the data from from fakeApi store and i used local storage so that he can make update and delete and add on the products the second is a user the user can see the whole categories and products and he can filter based on price and rating there is a login page that validates the roles of the two users there is guards that validates the roles and prevent each users to see the creditional of the other one to run the project you can use ng serve
